@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drama Llama", "Drama Llama.csproj", "{BCC04A6C-22E4-4FC4-9C69-B718DDB4530D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCC04A6C-22E4-4FC4-9C69-B718DDB4530D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCC04A6C-22E4-4FC4-9C69-B718DDB4530D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCC04A6C-22E4-4FC4-9C69-B718DDB4530D}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{BCC04A6C-22E4-4FC4-9C69-B718DDB4530D}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{BCC04A6C-22E4-4FC4-9C69-B718DDB4530D}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{BCC04A6C-22E4-4FC4-9C69-B718DDB4530D}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

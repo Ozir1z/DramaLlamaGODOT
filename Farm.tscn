@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://earvadnu0q6u"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_yimtf"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_quuts"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[node name="Farm" type="Node3D"]
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.47608, 0, 0, 0, 0.999999, 0, 0, 0, 6.88737, 0, 0, 0)
+mesh = SubResource("PlaneMesh_yimtf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_quuts")
