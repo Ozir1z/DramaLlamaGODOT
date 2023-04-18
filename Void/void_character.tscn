@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bi42adkote5vt"]
+[gd_scene load_steps=4 format=3 uid="uid://bllin1f7f3nxd"]
 
-[ext_resource type="Script" path="res://VoidCharacter.cs" id="1_wwfea"]
+[ext_resource type="Script" path="res://Void/VoidCharacter.cs" id="1_wwfea"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xmito"]
 

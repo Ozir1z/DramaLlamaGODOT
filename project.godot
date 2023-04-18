@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="Drama Llama"
-run/main_scene="res://Farm.tscn"
+run/main_scene="res://Farm/Farm.tscn"
 config/features=PackedStringArray("4.0", "C#", "Forward Plus")
-config/icon="res://icon.svg"
 
 [dotnet]
 

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://kdug6641ttlj"]
+
+[resource]
+resource_name = "Light brown"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.772359, 0.729748, 0.454646, 1)
+roughness = 0.5

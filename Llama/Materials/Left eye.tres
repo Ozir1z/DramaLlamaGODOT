@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://digrtv8ldvmrf"]
+
+[ext_resource type="Texture2D" uid="uid://cytk156qvprdo" path="res://Llama/Llama left eye.png" id="1_e3y5t"]
+
+[resource]
+resource_name = "Left eye"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_e3y5t")
+roughness = 0.5

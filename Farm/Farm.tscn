@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://earvadnu0q6u"]
+[gd_scene load_steps=8 format=3 uid="uid://dq0nuj03v4xhp"]
 
-[ext_resource type="PackedScene" uid="uid://bi42adkote5vt" path="res://void.tscn" id="1_c8abv"]
+[ext_resource type="PackedScene" uid="uid://bllin1f7f3nxd" path="res://Void/void_character.tscn" id="1_jpck6"]
+[ext_resource type="PackedScene" uid="uid://dg2gtfwo4e21p" path="res://Llama/llama_character.tscn" id="2_r52sm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wd60q"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -30,7 +31,7 @@ transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75
 shadow_enabled = true
 
 [node name="Ground" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.47608, 0, 0, 0, 0.999999, 0, 0, 0, 6.88737, 0, 0, 0)
+transform = Transform3D(111.519, 0, 0, 0, 1.00204, 0, 0, 0, 102.737, 0, 0, 0)
 mesh = SubResource("PlaneMesh_yimtf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
@@ -38,5 +39,8 @@ mesh = SubResource("PlaneMesh_yimtf")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_quuts")
 
-[node name="Void" parent="." instance=ExtResource("1_c8abv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0112847, 0.798653, 0.0030551)
+[node name="Void" parent="." instance=ExtResource("1_jpck6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.904794, 0)
+
+[node name="llama" parent="." instance=ExtResource("2_r52sm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64938, 1.07222, -1.63255)

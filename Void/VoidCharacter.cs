@@ -19,7 +19,7 @@ public partial class VoidCharacter : CharacterBody3D
         Head = GetNode<Node3D>("Head");
         Cam = GetNode<Camera3D>("Head/Camera3D");
 
-        Input.MouseMode = Input.MouseModeEnum.Captured;
+       // Input.MouseMode = Input.MouseModeEnum.Captured;
     }
 
     public override void _Input(InputEvent @event)
