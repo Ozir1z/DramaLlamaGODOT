@@ -14,6 +14,9 @@ public partial class LlamaCharacter : BaseCharacter
         animPlayer.Play("Idle");
     }
 
+
+    // TODO add random pathing on navmesh and have random indle animations playing
+
     public override void _PhysicsProcess(double delta)
     {
         base._PhysicsProcess(delta);
@@ -27,19 +30,14 @@ public partial class LlamaCharacter : BaseCharacter
             Vector3 nextLocation = navAgent.TargetPosition;
             Vector3 newVelocity = (nextLocation - currentLocation).Normalized() * Speed;
 
+            LookAt(new Vector3(nextLocation.X, currentLocation.Y, nextLocation.Z));
             Velocity = Velocity.MoveToward(newVelocity, .25f);
-            //RotateY((nextLocation - currentLocation).Normalized().Y);
-            LookAt(nextLocation);
-            //Rotation = new Vector3(0,nextLocation.Y,0);
+   
             if (Velocity != Vector3.Zero)
                 animPlayer.Play("Walk");
 
             MoveAndSlide();
         }
-
-    //    navAgent.GetNextPathPosition();
-
-
     }
 
     public void UpdateAITargetLocation(Vector3 targetLocation)
