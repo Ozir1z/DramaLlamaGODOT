@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cadmahyfwqftb"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3]
 
-[ext_resource type="Texture2D" uid="uid://c511wofv2b3dr" path="res://Llama/Llama right eye.png" id="1_66qf7"]
+[ext_resource type="Texture2D" uid="uid://urgkrtwwe1fs" path="res://Llama/Textures/Llama right eye.png" id="1_66qf7"]
 
 [resource]
 resource_name = "Right eye"

@@ -1,25 +1,19 @@
 using Godot;
-using System;
-using System.Diagnostics;
 
-public partial class VoidCharacter : CharacterBody3D
+public partial class VoidCharacter : BaseCharacter
 {
-    const float speed = 5f;
-    const float jumpForce = 3f;
-    const float acceleration = 5f;
-    const float sensitivity = 0.01f;
+    protected const float Speed = 5f;
+    protected const float JumpVelocity = 5f;
+    protected const float Sensitivity = 0.01f;
 
-    public Node3D Head;
-    public Camera3D Cam;
-    
-    private Vector3 velocity = Vector3.Zero;
-
+    protected Node3D Head;
+    protected Camera3D Cam;
     public override void _Ready()
     {
         Head = GetNode<Node3D>("Head");
         Cam = GetNode<Camera3D>("Head/Camera3D");
 
-       // Input.MouseMode = Input.MouseModeEnum.Captured;
+        Input.MouseMode = Input.MouseModeEnum.Captured;
     }
 
     public override void _Input(InputEvent @event)
@@ -27,43 +21,39 @@ public partial class VoidCharacter : CharacterBody3D
         if (@event is InputEventMouseMotion) 
         {
             InputEventMouseMotion mouseMotion = @event as InputEventMouseMotion;
-            Head.RotateY(-mouseMotion.Relative.X * sensitivity);
-            Cam.RotateX(-mouseMotion.Relative.Y * sensitivity);
+            Head.RotateY(-mouseMotion.Relative.X * Sensitivity);
+            Cam.RotateX(-mouseMotion.Relative.Y * Sensitivity);
 
             Vector3 cameraRot = Cam.Rotation;
             cameraRot.X = Mathf.Clamp(cameraRot.X, Mathf.DegToRad(-80f), Mathf.DegToRad(80f));
             Cam.Rotation = cameraRot;
         }
-
     }
 
     public override void _PhysicsProcess(double delta)
     {
+        base._PhysicsProcess(delta);
+
+        Vector3 newVelocity = Velocity;
+
+        if (IsOnFloor() && Input.IsActionJustPressed("jump"))
+            newVelocity.Y = JumpVelocity;
+
         Vector2 inputDir = Input.GetVector("left", "right", "forward", "backward");
         Vector3 direction = (Head.GlobalTransform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
 
         if(direction != Vector3.Zero)
         {
-            velocity.X = direction.X * speed;
-            velocity.Z = direction.Z * speed;
+            newVelocity.X = direction.X * Speed;
+            newVelocity.Z = direction.Z * Speed;
         }
         else
         {
-            velocity.X = Mathf.MoveToward(velocity.X, 0, acceleration);
-            velocity.Z = Mathf.MoveToward(velocity.Z, 0, acceleration);
+            newVelocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+            newVelocity.Z = Mathf.MoveToward(Velocity.Z, 0, Speed);
         }
 
-        if(IsOnFloor() && Input.IsActionJustPressed("jump"))
-        {
-            velocity.Y = jumpForce;
-        }
-        
-        if(!IsOnFloor())
-        {
-            velocity.Y -= (float)(ProjectSettings.GetSettingWithOverride("physics/3d/default_gravity").AsDouble() * delta);
-        }
-
-        Velocity = velocity;
+        Velocity = newVelocity;
         MoveAndSlide();
     }
 }
