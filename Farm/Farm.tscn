@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dq0nuj03v4xhp"]
+[gd_scene load_steps=10 format=3 uid="uid://dq0nuj03v4xhp"]
 
 [ext_resource type="Script" path="res://Farm/Farm.cs" id="1_68hab"]
 [ext_resource type="PackedScene" uid="uid://bllin1f7f3nxd" path="res://Void/void_character.tscn" id="1_jpck6"]
 [ext_resource type="PackedScene" uid="uid://bu3moetx2u2ua" path="res://Llama/llama_character.tscn" id="2_r52sm"]
-[ext_resource type="Script" path="res://Llama/LlamaCharacter.cs" id="3_o4lvo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wd60q"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -41,7 +40,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.80354, 0.904794, 0)
 
 [node name="llama" parent="." instance=ExtResource("2_r52sm")]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -2.75288, 0.806431, 0)
-script = ExtResource("3_o4lvo")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_w2yxr")
