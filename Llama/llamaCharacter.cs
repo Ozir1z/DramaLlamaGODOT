@@ -37,8 +37,8 @@ public partial class LlamaCharacter : BaseCharacterDramaLlama
         if (_navAgent.DistanceToTarget() < _locationTolerance && CurrentStatus == LlamaStatus.Walk)
         {
             SwitchToIdleStatus();
-            Random rand = new();
-            _idleTimer = rand.Next(3, 6);
+            Random randomIdleTimer = new();
+            _idleTimer = randomIdleTimer.Next(3, 6);
         }
 
         if (CurrentStatus == LlamaStatus.Idle)
@@ -50,13 +50,13 @@ public partial class LlamaCharacter : BaseCharacterDramaLlama
             if (_nextIdleAnimation == "Idle" && _specialIdleTimer <= 0)
             {
                 SwitchToIdleStatus();
-                Random rand = new();
-                int chance = rand.Next(1, 5);// 25% chance
+                Random randChance = new();
+                int chance = randChance.Next(1, 5);// 25% chance
 
                 if (chance == 1)
                 {
-                    Random rand2 = new();
-                    int idleAnimationNr = rand2.Next(0, _idleAnimations.Length);
+                    Random randAnimation = new();
+                    int idleAnimationNr = randAnimation.Next(0, _idleAnimations.Length);
                     _nextIdleAnimation = _idleAnimations[idleAnimationNr];
 
                 }
@@ -71,9 +71,9 @@ public partial class LlamaCharacter : BaseCharacterDramaLlama
         }
         if (_idleTimer <= 0 && CurrentStatus == LlamaStatus.Idle)
         {
-            Random random = new();
-            int randomX = random.Next(-_roamRadius, _roamRadius);
-            int randomZ = random.Next(-_roamRadius, _roamRadius);
+            Random randomRadius = new();
+            int randomX = randomRadius.Next(-_roamRadius, _roamRadius);
+            int randomZ = randomRadius.Next(-_roamRadius, _roamRadius);
             _navAgent.TargetPosition = _startLocation - new Vector3(randomX, 0, randomZ);
             CurrentStatus = LlamaStatus.Walk;
         }
