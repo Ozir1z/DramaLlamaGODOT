@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dq0nuj03v4xhp"]
+[gd_scene load_steps=10 format=3 uid="uid://xohotexxm22"]
 
-[ext_resource type="Script" path="res://Farm/Farm.cs" id="1_68hab"]
-[ext_resource type="PackedScene" uid="uid://bllin1f7f3nxd" path="res://Void/void_character.tscn" id="1_jpck6"]
-[ext_resource type="PackedScene" uid="uid://bu3moetx2u2ua" path="res://Llama/llama_character.tscn" id="2_r52sm"]
+[ext_resource type="Script" path="res://Farm/Farm.cs" id="1_wwbsc"]
+[ext_resource type="PackedScene" uid="uid://bllin1f7f3nxd" path="res://Void/void_character.tscn" id="2_xrswv"]
+[ext_resource type="PackedScene" uid="uid://bu3moetx2u2ua" path="res://Llama/llama_character.tscn" id="3_vqutv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wd60q"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -26,7 +26,10 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Arr
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_58825"]
 
 [node name="Farm" type="Node"]
-script = ExtResource("1_68hab")
+script = ExtResource("1_wwbsc")
+
+[node name="Void" parent="." instance=ExtResource("2_xrswv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.80354, 0.904794, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_cckgs")
@@ -34,12 +37,6 @@ environment = SubResource("Environment_cckgs")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
-
-[node name="Void" parent="." instance=ExtResource("1_jpck6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.80354, 0.904794, 0)
-
-[node name="llama" parent="." instance=ExtResource("2_r52sm")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -2.75288, 0.806431, 0)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_w2yxr")
@@ -53,3 +50,9 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/MeshInstance3D/StaticBody3D"]
 shape = SubResource("WorldBoundaryShape3D_58825")
+
+[node name="llama" parent="NavigationRegion3D" instance=ExtResource("3_vqutv")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -2.75288, 0.806431, 0)
+
+[node name="MoveToPoint" type="Node3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.26733, 0.334431, -3.01804)

@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class VoidCharacter : BaseCharacter
+public partial class VoidCharacter : BaseCharacterDramaLlama
 {
     protected const float Speed = 5f;
     protected const float JumpVelocity = 5f;

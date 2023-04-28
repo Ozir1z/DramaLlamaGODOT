@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://0fi4x1hjq0hq"]
+
+[ext_resource type="PackedScene" uid="uid://diohkwi8rljx4" path="res://Farmer/farmer.blend" id="1_48dbm"]
+[ext_resource type="Script" path="res://Farmer/FarmerCharacter.cs" id="2_nqc3q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pcte6"]
+size = Vector3(1.01976, 3.03898, 0.744524)
+
+[node name="farmer" instance=ExtResource("1_48dbm")]
+script = ExtResource("2_nqc3q")
+
+[node name="Farmer" parent="." index="0"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Body" parent="Farmer/Skeleton3D" index="0"]
+transform = Transform3D(-0.014873, 2.78284e-25, 6.60494e-18, -1.87388e-24, 0.014873, -4.84624e-09, 6.60494e-18, 4.84624e-09, 0.014873, 0.0205497, 0.501071, -0.0110647)
+bone_idx = 1
+
+[node name="Head_Lower" parent="Farmer/Skeleton3D" index="1"]
+transform = Transform3D(-0.014873, 9.52912e-22, 1.55431e-15, 4.23516e-22, 0.014873, -4.02999e-09, 6.66134e-16, 4.02999e-09, 0.014873, -0.0411175, 1.14655, 3.61387e-07)
+bone_idx = 3
+
+[node name="Arm_Claw_Left_upper" parent="Farmer/Skeleton3D" index="2"]
+transform = Transform3D(-0.014873, -2.47228e-10, 2.07162e-10, -2.89792e-10, 0.0144365, -0.00357672, 1.41626e-10, 0.00357673, 0.0144365, 1.99961e-08, -0.286673, -0.383045)
+bone_idx = 8
+
+[node name="Arm_Claw_Left_lower" parent="Farmer/Skeleton3D" index="3"]
+transform = Transform3D(-0.014873, -2.47232e-10, 2.07164e-10, -2.89797e-10, 0.0144365, -0.00357672, 1.41628e-10, 0.00357672, 0.0144365, 4.16613e-08, -0.404544, -0.536807)
+bone_idx = 10
+
+[node name="Arm_Lower_Left" parent="Farmer/Skeleton3D" index="4"]
+transform = Transform3D(-0.014873, -2.47229e-10, 2.07167e-10, -2.89794e-10, 0.0144365, -0.00357672, 1.41631e-10, 0.00357672, 0.0144365, 1.46462e-08, -0.0579233, -0.662994)
+bone_idx = 11
+
+[node name="Arm_Middle_Left" parent="Farmer/Skeleton3D" index="5"]
+transform = Transform3D(-0.014873, -2.60272e-10, 6.52989e-11, -2.60884e-10, 0.0148723, -0.000141981, 6.28113e-11, 0.000141984, 0.0148723, 2.14685e-09, 0.437085, -0.850792)
+bone_idx = 12
+
+[node name="Arm_Upper_Left" parent="Farmer/Skeleton3D" index="6"]
+transform = Transform3D(-0.014873, -1.50333e-10, -5.06037e-11, -1.56521e-10, 0.0146788, 0.00239565, -2.57283e-11, -0.00239565, 0.0146788, 1.14905e-08, 0.826919, -0.707538)
+bone_idx = 13
+
+[node name="Eye_Left" parent="Farmer/Skeleton3D" index="7"]
+transform = Transform3D(-0.014873, -1.21431e-16, 4.44089e-16, -1.249e-16, 0.014873, -4.84579e-09, 6.66134e-16, 4.84579e-09, 0.014873, -0.321647, 1.50205, -0.136997)
+bone_idx = 15
+
+[node name="Eye_Right" parent="Farmer/Skeleton3D" index="8"]
+transform = Transform3D(-0.014873, -1.21431e-16, 4.44089e-16, -1.249e-16, 0.014873, -4.84579e-09, 6.66134e-16, 4.84579e-09, 0.014873, -0.321647, 1.50205, 0.136998)
+bone_idx = 16
+
+[node name="Head_Upper" parent="Farmer/Skeleton3D" index="9"]
+transform = Transform3D(-0.014873, -1.21431e-16, 4.44089e-16, -1.249e-16, 0.014873, -4.83124e-09, 6.66134e-16, 4.83124e-09, 0.014873, -0.0205115, 1.50969, 4.79165e-07)
+bone_idx = 17
+
+[node name="Hat" parent="Farmer/Skeleton3D" index="10"]
+transform = Transform3D(-0.0147937, 0.00153405, 1.78896e-10, 0.00153405, 0.0147937, -5.63142e-09, 7.58785e-10, 5.58293e-09, 0.014873, -6.93759e-16, 1.87359, 6.15139e-07)
+bone_idx = 19
+
+[node name="Arm_Knife_Right" parent="Farmer/Skeleton3D" index="11"]
+transform = Transform3D(-0.014873, -1.37385e-09, -4.4843e-10, -1.42523e-09, 0.0147079, 0.00220993, -2.39317e-10, -0.00220993, 0.0147079, 1.02642e-07, -0.438201, 0.652972)
+bone_idx = 23
+
+[node name="Arm_Lower_Right" parent="Farmer/Skeleton3D" index="12"]
+transform = Transform3D(-0.014873, -1.29655e-09, -2.10642e-10, -1.30531e-09, 0.0148551, 0.000728538, -1.46879e-10, -0.00072854, 0.0148551, 4.98219e-08, 0.195961, 0.788714)
+bone_idx = 24
+
+[node name="Arm_Upper_Right" parent="Farmer/Skeleton3D" index="13"]
+transform = Transform3D(-0.014873, -7.07064e-10, 3.73043e-10, -7.68804e-10, 0.0145532, -0.00306762, 2.19188e-10, 0.00306762, 0.0145532, 2.37856e-08, 0.818905, 0.694972)
+bone_idx = 25
+
+[node name="Leg" parent="Farmer/Skeleton3D" index="14"]
+transform = Transform3D(-0.014873, -3.58047e-15, 1.42109e-14, -3.52496e-15, 0.014873, -4.84943e-09, -2.84217e-14, 4.84943e-09, 0.014873, 8.86458e-10, -0.422198, -1.26893e-07)
+bone_idx = 27
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.727685, 0)
+shape = SubResource("BoxShape3D_pcte6")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="3"]

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class BaseCharacter : CharacterBody3D
+public partial class BaseCharacterDramaLlama : CharacterBody3D
 {
 	protected float Gravity = ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
 

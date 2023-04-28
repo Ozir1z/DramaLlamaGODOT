@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0u8hks5eoxm8"
-path.s3tc="res://.godot/imported/windows_xp.png-897b99cf2a4017c672ad5d8744752e06.s3tc.ctex"
+uid="uid://bg1yljspgpgio"
+path.s3tc="res://.godot/imported/T_Eye.png-6337578796b1a9ccb31c4d79c7089ebb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Teaser/windows_xp.png"
-dest_files=["res://.godot/imported/windows_xp.png-897b99cf2a4017c672ad5d8744752e06.s3tc.ctex"]
+source_file="res://Farmer/Textures/T_Eye.png"
+dest_files=["res://.godot/imported/T_Eye.png-6337578796b1a9ccb31c4d79c7089ebb.s3tc.ctex"]
 
 [params]
 

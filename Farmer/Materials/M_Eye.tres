@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://nemdk2fp272l"]
+
+[ext_resource type="Texture2D" uid="uid://bg1yljspgpgio" path="res://Farmer/Textures/T_Eye.png" id="1_qbr4c"]
+
+[resource]
+resource_name = "M_Eye"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_qbr4c")
+roughness = 0.5
