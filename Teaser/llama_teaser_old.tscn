@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://cccyt1dhlggc5"]
+
+[ext_resource type="PackedScene" uid="uid://daoh02j33d5vk" path="res://Llama/llama.blend" id="1_7ceel"]
+[ext_resource type="Script" path="res://Teaser/LlamaTeaser.cs" id="2_h4rix"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_863m2"]
+size = Vector3(78.2406, 1.13705, 1.41474)
+
+[node name="llama" instance=ExtResource("1_7ceel")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+script = ExtResource("2_h4rix")
+
+[node name="Llama" parent="." index="0"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Llama" index="0"]
+bones/0/position = Vector3(-51.3312, 5.56892, -2.24376e-06)
+bones/0/rotation = Quaternion(0.5, 0.5, 0.5, -0.5)
+bones/1/rotation = Quaternion(0.92933, 2.64317e-07, 8.24316e-07, 0.369251)
+bones/4/rotation = Quaternion(-0.0375899, -0.706107, -0.0375899, 0.706107)
+bones/5/position = Vector3(-1.76431e-07, 74.0124, -9.07309e-07)
+bones/5/rotation = Quaternion(-0.689118, 1.51963e-07, 1.55491e-07, 0.724649)
+bones/6/position = Vector3(6.90053, -1.83025, 6.07443)
+bones/6/rotation = Quaternion(0.563035, 2.45141e-08, 5.28621e-09, 0.826433)
+bones/8/position = Vector3(-7.08212, -1.83025, 6.07443)
+bones/8/rotation = Quaternion(0.45652, 3.4192e-08, 3.55747e-08, 0.889713)
+bones/14/rotation = Quaternion(0.688257, -0.162181, -0.688257, -0.162181)
+bones/16/rotation = Quaternion(0.688257, -0.162181, -0.688257, -0.162181)
+bones/18/rotation = Quaternion(0.692144, 0.144696, -0.692143, 0.144696)
+bones/20/rotation = Quaternion(0.692144, 0.144696, -0.692143, 0.144696)
+bones/22/position = Vector3(89.7745, 73.9872, 4.21671e-06)
+
+[node name="Tail_2" parent="Llama/Skeleton3D" index="0"]
+transform = Transform3D(0.977351, -0.211623, 6.79061e-07, 0.211623, 0.977351, 5.86837e-07, -8.21602e-07, -4.48003e-07, 1, -56.461, 30.812, -0.26324)
+bone_idx = 2
+
+[node name="Body_2" parent="Llama/Skeleton3D" index="1"]
+transform = Transform3D(1, -1.19209e-07, 5.96046e-08, 5.96046e-08, 1, 0, -1.19209e-07, -5.96046e-08, 1, -13.3683, -3.9435, -0.263241)
+bone_idx = 3
+
+[node name="R_Ear" parent="Llama/Skeleton3D" index="2"]
+transform = Transform3D(0.952155, 0.305613, 1.19807e-09, -0.305613, 0.952155, 3.18392e-07, 1.25812e-07, -3.0785e-07, 1, 66.0848, 90.0105, 6.44717)
+bone_idx = 7
+
+[node name="L_Ear" parent="Llama/Skeleton3D" index="3"]
+transform = Transform3D(0.752598, 0.65848, -2.70245e-07, -0.65848, 0.752597, -1.13576e-07, 1.32496e-07, 2.58228e-07, 1, 68.5327, 89.0736, -7.07116)
+bone_idx = 9
+
+[node name="Head_2" parent="Llama/Skeleton3D" index="4"]
+transform = Transform3D(0.998876, -0.0473791, 1.85097e-07, 0.0473791, 0.998876, 4.12673e-07, -2.06743e-07, -4.08781e-07, 1, 72.9387, 74.5572, -0.263241)
+bone_idx = 10
+
+[node name="L_Eye" parent="Llama/Skeleton3D" index="5"]
+transform = Transform3D(1.05936, 0.0582586, -3.43843e-07, -0.0582586, 1.05936, 4.04838e-07, 3.57733e-07, -3.85276e-07, 1.06096, 73.7051, 81.9138, -8.8282)
+bone_idx = 11
+
+[node name="R_Eye" parent="Llama/Skeleton3D" index="6"]
+transform = Transform3D(1.05936, 0.0582586, -3.43843e-07, -0.0582586, 1.05936, 4.04838e-07, 3.57733e-07, -3.85276e-07, 1.06096, 73.704, 81.8988, 8.71337)
+bone_idx = 12
+
+[node name="Neck_2" parent="Llama/Skeleton3D" index="7"]
+transform = Transform3D(0.985052, -0.172257, -9.50093e-08, 0.172257, 0.985052, 3.0557e-07, 8.47756e-08, -3.6773e-07, 1, 62.4731, 32.0624, -0.263239)
+bone_idx = 13
+
+[node name="BR_Leg_2" parent="Llama/Skeleton3D" index="8"]
+transform = Transform3D(0.668583, 0.743637, 1.11743e-07, -0.743637, 0.668583, 1.177e-07, 9.38212e-08, -1.49549e-07, 1, -71.358, -56.7356, 26.1494)
+bone_idx = 15
+
+[node name="FR_Leg_2" parent="Llama/Skeleton3D" index="9"]
+transform = Transform3D(0.737822, 0.674995, 2.05104e-07, -0.674995, 0.737822, 3.78076e-08, -7.51942e-09, -1.54892e-07, 1, 12.7574, -54.0839, 22.7318)
+bone_idx = 17
+
+[node name="BL_Leg_2" parent="Llama/Skeleton3D" index="10"]
+transform = Transform3D(0.66864, -0.743586, 2.04158e-07, 0.743586, 0.66864, -2.78371e-08, 8.44732e-08, 1.10971e-08, 1, -40.2631, -57.4674, -25.6264)
+bone_idx = 19
+
+[node name="FL_Leg_2" parent="Llama/Skeleton3D" index="11"]
+transform = Transform3D(0.73799, -0.674812, 3.61433e-09, 0.674812, 0.73799, -1.64308e-07, 3.03485e-07, 1.19823e-09, 1, 41.3595, -54.7899, -22.6701)
+bone_idx = 21
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -31.7191, 14.3794)
+shape = SubResource("BoxShape3D_863m2")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="3"]
+avoidance_enabled = true

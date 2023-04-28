@@ -2,14 +2,16 @@ using Godot;
 
 public partial class TeaserLevel : Node
 {
-    //private FarmerCharacter _farmCharacter;
+    private BusTeaser _bus;
+    private LlamaTeaser _llama;
 
     public override void _Ready()
     {
-       // _farmCharacter = GetNode<FarmerCharacter>("farmer");
-      //  _farmCharacter = GetNode<FarmerCharacter>("farmer");
-      //  _farmCharacter.SetMoveToPoint(GetNode<Node3D>("MoveToPoint").GlobalPosition);
+        _bus = GetNode<BusTeaser>("bus_teaser");
+        _llama = GetNode<LlamaTeaser>("llama_teaser");
     }
+
+
 
     public override void _Process(double delta)
     {
