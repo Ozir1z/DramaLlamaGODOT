@@ -1,15 +1,24 @@
-[gd_scene load_steps=10 format=3 uid="uid://xohotexxm22"]
+[gd_scene load_steps=12 format=3 uid="uid://xohotexxm22"]
 
 [ext_resource type="Script" path="res://Farm/Farm.cs" id="1_wwbsc"]
 [ext_resource type="PackedScene" uid="uid://bllin1f7f3nxd" path="res://Void/void_character.tscn" id="2_xrswv"]
+[ext_resource type="Shader" path="res://Farm/FarmSky.gdshader" id="3_ghsg1"]
 [ext_resource type="PackedScene" uid="uid://bu3moetx2u2ua" path="res://Llama/llama_character.tscn" id="3_vqutv"]
+[ext_resource type="Texture2D" uid="uid://kblllohkdtg6" path="res://Farm/face.png" id="4_j8854"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wd60q"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_73ocl"]
+shader = ExtResource("3_ghsg1")
+shader_parameter/stars_intensity = -2.829
+shader_parameter/offset_stars = 0.083
+shader_parameter/star_falloff = 2.694
+shader_parameter/stars_speed = 1.0
+shader_parameter/stars_fade_modulation = 1.8
+shader_parameter/stars_cutoff = 1.0
+shader_parameter/stars_sky_color = Color(0.580392, 0.0627451, 0.584314, 1)
+shader_parameter/testTexture = ExtResource("4_j8854")
 
 [sub_resource type="Sky" id="Sky_ju3se"]
-sky_material = SubResource("ProceduralSkyMaterial_wd60q")
+sky_material = SubResource("ShaderMaterial_73ocl")
 
 [sub_resource type="Environment" id="Environment_cckgs"]
 background_mode = 2
